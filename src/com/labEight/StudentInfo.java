@@ -1,6 +1,9 @@
 package com.labEight;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import org.omg.CORBA.DynAnyPackage.Invalid;
 
 public class StudentInfo {
 
@@ -41,6 +44,7 @@ public class StudentInfo {
 
 		while (cont.equalsIgnoreCase("yes")) {
 
+			try {
 			//I validate the user's choice to find out more information
 			
 			String infoOption = Validator.getString(scnr, "What else would you like to know about "
@@ -63,10 +67,20 @@ public class StudentInfo {
 			} else {
 				System.out.println("Please enter a valid option.");
 			}
+			}
+			
+			//User entered incorrect input
+			//These are additional catches to the ones already in place earlier
+			catch (InputMismatchException e) {
+				System.out.println("Invalid input!");
+			}
+			catch(IndexOutOfBoundsException e) {
+				System.out.println("You must enter a number within the range of students");
+			}
 
 			// I ask if the user if they would like to continue, if "yes", while loop will
 			// begin again.
-
+			
 			cont = Validator.getString(scnr, "\nWould you like to know more? (yes/no)");
 
 		}
