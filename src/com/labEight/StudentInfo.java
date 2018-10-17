@@ -74,6 +74,9 @@ public class StudentInfo {
 			catch (InputMismatchException e) {
 				System.out.println("Invalid input!");
 			}
+			catch (IllegalArgumentException e) {
+				System.out.println("Illegal argument!");
+			}
 			catch(IndexOutOfBoundsException e) {
 				System.out.println("You must enter a number within the range of students");
 			}
