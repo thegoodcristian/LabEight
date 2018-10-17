@@ -3,8 +3,6 @@ package com.labEight;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import org.omg.CORBA.DynAnyPackage.Invalid;
-
 public class StudentInfo {
 
 	public static void main(String[] args) {
