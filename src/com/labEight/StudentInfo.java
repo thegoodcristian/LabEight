@@ -88,7 +88,7 @@ public class StudentInfo {
 
 		}
 
-		// Otherwise, I bed farewell to the user. I close the scanner to avoid resource
+		// Otherwise, I bid farewell to the user. I close the scanner to avoid resource
 		// leak.
 
 		System.out.println("Goodbye!");
