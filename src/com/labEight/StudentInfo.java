@@ -3,6 +3,7 @@ package com.labEight;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class StudentInfo {
 
 	public static void main(String[] args) {
@@ -83,6 +84,10 @@ public class StudentInfo {
 			// begin again.
 			
 			cont = Validator.getString(scnr, "\nWould you like to know more? (yes/no)");
+			while (!cont.equalsIgnoreCase("yes") && !cont.equalsIgnoreCase("no")) {
+				System.out.println("\nPlease only enter yes/no: ");
+				cont = Validator.getString(scnr, "\nWould you like to know more? (yes/no)");
+			}
 
 		}
 
